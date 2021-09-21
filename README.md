@@ -18,6 +18,7 @@ Files:
 | \|     | Random Forest | 561.918       | 562.135     |
 | \|     | XGBoost       | 573.365       | 567.926     |
 | \|     | Ensemble      | 554.118       | **552.983** |
+
 *Denoted in bold are the best results.
 
 ## Submission file
