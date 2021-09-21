@@ -1,0 +1,9 @@
+mae and mse on test data
+mae svm: 17.694
+mae rfr: 18.376
+mae xgb: 17.855
+ensemble mae: 17.659
+mse svm: 579.333
+mse rfr: 562.135
+mse xgb: 567.926
+ensemble mse: 552.983
