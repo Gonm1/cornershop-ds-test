@@ -1,3 +1,28 @@
+# Repo's description
+
+Files:
+1. `data_process.ipynb`: a notebook that processes the tables provided and combines them into a dataset. It joins the tables, re-structure columns, add extra features, remove outliers and outputs it all to a `data.csv` file. Also it outputs the `submission.csv` file, which have the rows not containing a `total_minutes` value for later prediction.
+2. `random_search.ipynb`: setups pipelines and perform a randomized search of hyperparameters to find the best combination for the given task. Outputs a `results.txt` file with the mae and mse metrics over the test data and also outputs the best models. All output can be found in `rand_search_results` folder.
+3. `grid_search.ipynb`: setups the pipelines and perform a grid search around the hyperparameters found in the randomized search with the objective of finding an even better combination. All output can be found in `grid_search_results` folder.
+4. `predictions.ipynb`: loads the models, make the predictions over the submission data and writes it to `submission_file.csv`.
+
+## Results on test data - summary table
+
+| Metric | Model         | Random search | Grid search |
+|--------|---------------|---------------|-------------|
+| MAE    | SVM           | 17.696        | 17.694      |
+| \|     | Random Forest | 18.375        | 18.376      |
+| \|     | XGBoost       | 17.885        | 17.855      |
+| \|     | Ensemble      | **17.658**    | **17.659**  |
+| MSE    | SVM           | 579.375       | 579.333     |
+| \|     | Random Forest | 561.918       | 562.135     |
+| \|     | XGBoost       | 573.365       | 567.926     |
+| \|     | Ensemble      | 554.118       | **552.983** |
+*Denoted in bold are the best results.
+
+## Submission file
+The predictions on the submission data were made with the grid search ensemble model and can be found on the `submission_file.csv`.
+
 # Cornershop´s Data Science Test
 
 Cornershop has operations in several cities and countries, delivering thousands of orders every day. In order to deliver these orders on time we depend on good estimations of how much time the shopper needs to complete the order.
